@@ -1,5 +1,7 @@
 -- SQL Project - Data Cleaning
 
+
+-- link for the data set used
 -- https://www.kaggle.com/datasets/swaptr/layoffs-2022
 
 
@@ -316,9 +318,12 @@ AND percentage_laid_off IS NULL;
 SELECT * 
 FROM world_layoffs.layoffs_staging2;
 
+
+-- drop the row_num column as we no longer need that
 ALTER TABLE layoffs_staging2
 DROP COLUMN row_num;
 
 
+-- here we have the final result
 SELECT * 
 FROM world_layoffs.layoffs_staging2;
